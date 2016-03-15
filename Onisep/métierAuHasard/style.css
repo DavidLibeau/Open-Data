@@ -1,0 +1,89 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	color: white;
+	font-family: sans-serif;
+	overflow: hidden;
+	margin:0;
+	padding:0;
+	
+	background: #444444;
+	background: -moz-radial-gradient(center, ellipse cover, #444444 0%, #000000 99%);
+	background: -webkit-radial-gradient(center, ellipse cover, #444444 0%,#000000 99%);
+	background: radial-gradient(ellipse at center, #444444 0%,#000000 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#000000',GradientType=1 );
+}
+
+header {
+	position:relative;
+	background-image: url("header.jpg");
+	background-size: cover;
+	height:20vh;
+	width: 100vw;
+	min-height: 100px;
+}
+header h1 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom:0;
+	mix-blend-mode: lighten;
+}
+header h1>span {
+	color:black;
+	background-color: white;
+	padding: 0 5px;
+}
+
+main {
+	text-align: center;
+	padding: 0 5vw;
+	padding-top: 5vh;
+}
+
+
+main  h2 {
+	margin: 5vh 0;
+}
+
+main button {
+	font-size: 18px;
+	color:#D12828;
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+	padding:10px;
+	cursor:pointer;
+}
+
+main p{
+	display: none;
+}
+main p>a {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+main p>a:hover {
+	text-decoration: underline;
+}
+
+strong {
+	color:#D12828;
+	background-color: white;
+	padding: 0 5px;
+}
+
+footer {
+	background: white;
+	color: black;
+	position: fixed;
+	bottom: 0;
+	width:100%;
+	padding-left: 10px;
+}
+
+footer a {
+	color:#D12828;
+	text-decoration: none;
+}
