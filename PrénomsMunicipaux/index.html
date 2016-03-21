@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="fr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Prénoms municipaux</title>
+	<link rel="stylesheet" href="style.css" />
+	<meta name="description" content="Vous cherchez un prénom pour votre futur enfant et vous voulez qu'il soit conseiller municipal (ou pas) ? Ce site est pour vous." />
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@DavidLibeau" />
+	<meta name="twitter:title" content="Prénoms municipaux - Open Data" />
+	<meta name="twitter:description" content="Vous cherchez un prénom pour votre futur enfant et vous voulez qu'il soit conseiller municipal (ou pas) ? Ce site est pour vous." />
+	<meta name="twitter:creator" content="@DavidLibeau" />
+	<meta name="twitter:image" content="http://www.example.com/image.jpg">
+	<meta property="og:title" content="Prénoms municipaux - Open Data" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://dav.li/prenomsMunicipaux/" />
+	<meta property="og:image" content="http://dav.li/prenomsMunicipaux/hand-baby.jpg" />
+	<meta property="og:description" content="Vous cherchez un prénom pour votre futur enfant et vous voulez qu'il soit conseiller municipal (ou pas) ? Ce site est pour vous." />
+	<meta property="og:site_name" content="Dav.Li" />
+	<meta property="fb:admins" content="100000050551887" />
+</head>
+<body>
+	<header>
+		<h1>Prénoms municipaux</h1>
+		<h4>Vous cherchez un prénom pour votre futur enfant et vous voulez qu'il soit conseiller municipal (ou pas) ? Ce site est pour vous.</h4>
+	</header>
+	<main>
+		<div id="form">
+			<form>
+				<h2>Votre enfant</h2>
+				<p>
+					C'est<label><input type="radio" value="M" name="sex"/>un garçon</label> <span class="ou">ou</span> <label><input type="radio" value="F" name="sex"/>une fille</label> <span class="ou">(ou</span><label><input checked type="radio" value="N" name="sex"/>je sais pas</label><span class="ou">)</span>.
+				</p>
+				<p>
+					Je veux<label><input checked type="radio" value="true" name="conseiller_municipal"/>qu'il soit conseiller municipal</label> <span class="ou">ou</span> <label><input type="radio" value="false" name="conseiller_municipal"/>non</label>.
+				</p>
+				<p>
+					En plus, je veux que <strong>le prénom</strong> commence par 
+					<select name="lettre">
+						<option value="">aucune lettre précise</option>
+						<option value="a">un A</option>
+						<option value="b">un B</option>
+						<option value="c">un C</option>
+						<option value="d">un D</option>
+						<option value="e">un E</option>
+						<option value="f">un F</option>
+						<option value="g">un G</option>
+						<option value="h">un H</option>
+						<option value="i">un I</option>
+						<option value="j">un J</option>
+						<option value="k">un K</option>
+						<option value="l">un L</option>
+						<option value="m">un M</option>
+						<option value="n">un N</option>
+						<option value="o">un O</option>
+						<option value="p">un P</option>
+						<option value="q">un Q</option>
+						<option value="r">un R</option>
+						<option value="s">un S</option>
+						<option value="t">un T</option>
+						<option value="u">un U</option>
+						<option value="v">un V</option>
+						<option value="w">un W</option>
+						<option value="x">un X</option>
+						<option value="y">un Y</option>
+						<option value="z">un Z</option>
+					</select> et qu'il soit d'une longueur
+					<select name="taille">
+						<option value="">indiférente</option>
+						<option value="grand">grande (>=8 caractères)</option>
+						<option value="petit">petite (<=5 caractères)</option>
+					</select>.
+				</p>
+				<p>
+					Je veux aussi un prénom
+					<select name="nom_compose">
+						<option value="">pas obligatoirement composé</option>
+						<option value="uniquement">forcement composé</option>
+					</select>
+				</p>
+			</form>
+			<button id="btnrefresh">Trouver</button>
+		</div>
+		
+		<div id="resultats">
+			<h2>Résulats</h2>
+			<table>
+				<thead>
+					<tr><td>Prénom</td><td>Sex</td><td title="Nombre de conseillers municipaux ayant ce prénom">Nombre</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>-</td><td>-</td><td>-</td></tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</main>
+	<footer>
+		<p><a href="https://github.com/DavidLibeau/Open-Data" target="_blank">Site web CC-0</a> - Réalisé avec la <a href="https://www.data.gouv.fr/fr/datasets/les-prenoms-des-conseillers-municipaux/" target="_blank">liste des prénoms des conseillers municipaux en Open Data</a>.</p>
+	</footer>
+	
+	<script type="text/javascript" src="http://dav.li/jquery/2.1.4.js"></script>
+	<script src="script.js"></script>
+	
+</body>
+</html>
