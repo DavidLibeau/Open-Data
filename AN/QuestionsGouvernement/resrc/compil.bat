@@ -1,1 +1,1 @@
-java -classpath ./xalan.jar;. org.apache.xalan.xslt.Process -in apogee.xml -xsl question10.xsl -out resultat.xml
+java -classpath ./xalan.jar;. org.apache.xalan.xslt.Process -in ../Questions_gouvernement_XIV.xml -xsl ../style.xsl -out ../view.html
