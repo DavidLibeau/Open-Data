@@ -22,9 +22,10 @@
 	      <td>
 	      <xsl:for-each select="//questionsGvt/question[auteur/groupe/abrege=$groupe and not(indexationAN/rubrique=preceding-sibling::question[auteur/groupe/abrege=$groupe]/indexationAN/rubrique)]/indexationAN/rubrique">
 	        <xsl:variable name="rubrique" select="."/>
+			<xsl:variable name="nbQuestions" select="count(//questionsGvt/question[auteur/groupe/abrege=$groupe and indexationAN/rubrique=$rubrique])"/>
 			<span>
-				<xsl:attribute name="style">font-size:<xsl:value-of select="count(//questionsGvt/question[auteur/groupe/abrege=$groupe and indexationAN/rubrique=$rubrique])"/>px</xsl:attribute>
-				<xsl:attribute name="title"><xsl:value-of select="$rubrique"/></xsl:attribute>
+				<xsl:attribute name="style">font-size:<xsl:value-of select="$nbQuestions"/>px</xsl:attribute>
+				<xsl:attribute name="title"><xsl:value-of select="$rubrique"/> : <xsl:value-of select="$nbQuestions"/> question(s)</xsl:attribute>
 				<xsl:value-of select="$rubrique"/>
 			</span>
 	      	<xsl:text disable-output-escaping="yes"> / </xsl:text>
