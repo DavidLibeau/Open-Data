@@ -4,3 +4,8 @@
 
 
 Données : http://data.assemblee-nationale.fr/travaux-parlementaires/questions/questions-au-gouvernement
+
+
+## Licence
+
+Public domain CC-0
